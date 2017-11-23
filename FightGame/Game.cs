@@ -24,46 +24,9 @@ namespace FightGame
  |    __)  |  |/ ___\|  |  \   __\ /   \  ___\__  \  /     \_/ __ \ 
  |     \   |  / /_/  >   Y  \  |   \    \_\  \/ __ \|  Y Y  \  ___/ 
  \___  /   |__\___  /|___|  /__|    \______  (____  /__|_|  /\___  >
-     \/      /_____/      \/               \/     \/      \/     \/  by Diego", ConsoleColor.Cyan);
+     \/      /_____/      \/               \/     \/      \/     \/  by Fran", ConsoleColor.Cyan);
             var playerService = new CustomPlayerService();
             Players = playerService.GetPlayers();
-        }
-            Players = new List<Player>
-            {
-                
-                new Player
-                {
-                    Id = ++LastId,
-                    Name = "Cat Woman",
-                    Gender = Gender.Female,
-                    Lives = Game.DefaultLives,
-                    Power = Game.DefaultPower
-                },
-                new Player
-                {
-                    Id = ++LastId,
-                    Name = "Lobezno",
-                    Gender = Gender.Male,
-                    Lives = Game.DefaultLives,
-                    Power = Game.DefaultPower
-                },
-                new Player
-                {
-                    Id = ++LastId,
-                    Name = "Wonder Woman",
-                    Gender = Gender.Female,
-                    Lives = Game.DefaultLives,
-                    Power = Game.DefaultPower
-                },
-                new Player
-                {
-                    Id = ++LastId,
-                    Name = "Batman",
-                    Gender = Gender.Male,
-                    Lives = Game.DefaultLives,
-                    Power = Game.DefaultPower
-                },
-            };
         }
 
         public void Run()
