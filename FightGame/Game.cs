@@ -25,7 +25,7 @@ namespace FightGame
  |     \   |  / /_/  >   Y  \  |   \    \_\  \/ __ \|  Y Y  \  ___/ 
  \___  /   |__\___  /|___|  /__|    \______  (____  /__|_|  /\___  >
      \/      /_____/      \/               \/     \/      \/     \/  by Fran", ConsoleColor.Cyan);
-            var playerService = new CustomPlayerService();
+            IPlayerService playerService = new ApiPlayerService();
             Players = playerService.GetPlayers();
         }
 
