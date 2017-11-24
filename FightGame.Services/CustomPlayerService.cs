@@ -82,5 +82,11 @@ namespace FightGame
 
             throw new Exception("Jugador no encontrado");
         }
+
+        public void Delete(int id)
+        {
+            var player = _players.First(x => x.Id == id);
+            _players.Remove(player);
+        }
     }
 }
