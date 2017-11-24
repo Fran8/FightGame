@@ -2,12 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace FightGame
 {
-
-    public class CustomPlayerService : IPlayerService   
+    public class CustomPlayerService : IPlayerService
     {
         private static List<Player> _players = new List<Player>();
 
@@ -26,7 +24,7 @@ namespace FightGame
 
         public List<Player> GetPlayers()
         {
-            if (_players.Count == 0) // (!_players.Any())
+            if (!_players.Any()) // players.Count == 0
             {
                 _players = new List<Player>
                 {
@@ -70,7 +68,8 @@ namespace FightGame
 
         public Player UpdatePlayer(Player player)
         {
-            var match = _players.FirstOrDefault(x => x.Id == player.Id);
+            var matching = _players.FirstOrDefault(x => x.Id == player.Id);
+
             if(matching != null)
             {
                 matching.Lives = player.Lives;

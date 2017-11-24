@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FightGame
+﻿namespace FightGame
 {
     public class Player
     {
@@ -16,7 +14,6 @@ namespace FightGame
             var genderDisplay = (Gender == Gender.Male)
                 ? "Hombre"
                 : "Mujer";
-
 
             return $"{Name.PadRight(20)}\t\t{Id}\t{Lives}\t{Power}\t{Gems}\t{genderDisplay}";
         }
